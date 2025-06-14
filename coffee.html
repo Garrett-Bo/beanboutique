@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Our Coffees</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/coffee.css">
+    <link rel="stylesheet" href="css/hompage.css">
+    <script src="assets/cart-functions.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">Bean Boutique</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html" class="active">Coffee</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                </ul>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <button class="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-small" style="background-image: url('https://images.unsplash.com/photo-1510698118247-fec51419736c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');">
+            <div class="hero-content">
+                <h1>Our Exquisite Coffee Selection</h1>
+                <p>Explore a world of flavors, from single-origin gems to our expertly crafted blends.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Discover Your Next Favorite Brew</h2>
+
+                <div class="search-bar-plugin">
+                    <input type="text" id="coffeeSearchInput" placeholder="Search for coffee by name" class="search-input">
+                </div>
+
+                <div class="another-plugin-placeholder">
+                   <b>
+                     <p>"From origin to roast, discover the bean that speaks to your senses."</p>
+                   </b>
+                </div>
+
+                <div class="coffee-grid" id="coffeeGrid">
+                    <div class="coffee-card" data-name="Ethiopian Yirgacheffe" data-notes="floral citrus bergamot light">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Ethiopian Yirgacheffe">
+                        <div class="card-content">
+                            <h3>Ethiopian Yirgacheffe</h3>
+                            <p class="origin">Single Origin - Ethiopia</p>
+                            <p class="description">A truly exceptional coffee known for its bright and clean cup.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Floral, bright citrus, bergamot, honey sweetness.</p>
+                                <p><strong>Brewing Method:</strong> Ideal for pour-over, Aeropress, or drip coffee.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Ethiopian Yirgacheffe',
+        price: 15.99,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="coffee-card" data-name="Brazilian Cerrado" data-notes="nutty chocolate caramel bold">
+                        <img src="https://phoeberose.co.nz/cdn/shop/files/20241031_095335_0f5ba9b8-c673-4a5d-a6f5-2e0c3fb70d4d.jpg?v=1733877291&width=2992" alt="Brazilian Cerrado">
+                        <div class="card-content">
+                            <h3>Brazilian Cerrado</h3>
+                            <p class="origin">Single Origin - Brazil</p>
+                            <p class="description">A classic, full-bodied coffee with low acidity and a smooth finish.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Roasted nuts, dark chocolate, caramel, balanced.</p>
+                                <p><strong>Brewing Method:</strong> Excellent for espresso, French press, or drip coffee.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Brazilian Cerrado',
+        price: 13.99,
+        img: 'https://phoeberose.co.nz/cdn/shop/files/20241031_095335_0f5ba9b8-c673-4a5d-a6f5-2e0c3fb70d4d.jpg?v=1733877291&width=2992',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="coffee-card" data-name="Colombian Supremo" data-notes="balanced smooth caramel fruity">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1b2k3g4c7j6J5X8Y1Zy7f2x4s5z8Fq3e9Ww&s" alt="Colombian Supremo">
+                        <div class="card-content">
+                            <h3>Colombian Supremo</h3>
+                            <p class="origin">Single Origin - Colombia</p>
+                            <p class="description">A renowned, consistently smooth coffee with a delightful aroma.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Sweet, citrus, caramel, mild fruitiness, clean finish.</p>
+                                <p><strong>Brewing Method:</strong> Versatile for most methods, especially drip and Aeropress.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Colombian Supremo',
+        price: 14.99,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1b2k3g4c7j6J5X8Y1Zy7f2x4s5z8Fq3e9Ww&s',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="coffee-card" data-name="Sumatra Mandheling" data-notes="earthy bold spicy woody dark">
+                        <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Sumatra Mandheling">
+                        <div class="card-content">
+                            <h3>Sumatra Mandheling</h3>
+                            <p class="origin">Single Origin - Indonesia</p>
+                            <p class="description">A distinctive coffee with a heavy body and complex, earthy notes.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Earthy, dark chocolate, mild spice, low acidity.</p>
+                                <p><strong>Brewing Method:</strong> Great for French press, espresso, and cold brew.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Sumatra Mandheling',
+        price: 16.49,
+        img: 'https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="coffee-card" data-name="Espresso Blend No. 7" data-notes="rich velvety dark chocolate caramel strong">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Espresso Blend No. 7">
+                        <div class="card-content">
+                            <h3>Espresso Blend No. 7</h3>
+                            <p class="origin">Signature Blend</p>
+                            <p class="description">Our masterfully crafted house blend, optimized for exceptional espresso.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Rich, dark chocolate, caramel, creamy body, hints of roasted almond.</p>
+                                <p><strong>Brewing Method:</strong> Exclusively designed for espresso machines.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Espresso Blend No. 7',
+        price: 15.49,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="coffee-card" data-name="Signature Cold Brew Blend" data-notes="smooth naturally sweet chocolate low acidity">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Signature Cold Brew Blend">
+                        <div class="card-content">
+                            <h3>Signature Cold Brew Blend</h3>
+                            <p class="origin">Specialty Blend</p>
+                            <p class="description">This blend is meticulously selected for a naturally smooth and sweet cold brew.</p>
+                            <div class="details">
+                                <p><strong>Tasting Notes:</strong> Smooth chocolate, low acidity, subtle fruitiness, refreshing.</p>
+                                <p><strong>Brewing Method:</strong> Best brewed as a cold brew, steeped for 12-24 hours.</p>
+                            </div>
+                            <button class="btn-add-to-cart"
+    onclick="addToCart({
+        name: 'Signature Cold Brew Blend',
+        price: 13.49,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU',
+        type: 'Coffee'
+    })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Bean Boutique</h3>
+                    <p>Sourcing and roasting the world's finest coffee since 2023.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="coffee.html">Our Coffees</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Sign up for updates on new arrivals and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
+                <p>Designed with &hearts; in-house. No templates were used.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (basic, can be expanded with actual menu display logic)
+        document.querySelector('.mobile-menu-button').addEventListener('click', () => {
+            const navUl = document.querySelector('.main-nav ul');
+            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+            navUl.style.flexDirection = 'column'; // Stack vertically for mobile
+            navUl.style.position = 'absolute';
+            navUl.style.top = '60px'; // Adjust based on header height
+            navUl.style.left = '0';
+            navUl.style.width = '100%';
+            navUl.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            navUl.style.padding = '1rem 0';
+            navUl.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+        });
+
+        // Animated Text Search Plugin Logic
+        const searchInput = document.getElementById('coffeeSearchInput');
+        const coffeeCards = document.querySelectorAll('.coffee-card');
+
+        searchInput.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            coffeeCards.forEach(card => {
+                const coffeeName = card.dataset.name.toLowerCase();
+                const coffeeNotes = card.dataset.notes.toLowerCase();
+                const cardContent = card.querySelector('.card-content');
+
+                if (coffeeName.includes(searchTerm) || coffeeNotes.includes(searchTerm)) {
+                    card.style.display = 'flex'; // Show the card
+                    cardContent.style.opacity = '0'; // Start fade in
+                    cardContent.style.transform = 'translateY(20px)'; // Start slide up
+
+                    // Use a short delay for animation
+                    setTimeout(() => {
+                        cardContent.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        cardContent.style.opacity = '1';
+                        cardContent.style.transform = 'translateY(0)';
+                    }, 50); // Small delay
+                } else {
+                    cardContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    cardContent.style.opacity = '0'; // Start fade out
+                    cardContent.style.transform = 'translateY(-20px)'; // Start slide down
+
+                    // Hide completely after animation
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300); // Match CSS transition duration
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

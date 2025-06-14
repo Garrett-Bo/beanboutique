@@ -1,0 +1,75 @@
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s;
+    min-height: 220px;
+}
+
+.event-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.event-date {
+    background: #A1887F;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    margin-right: 1.5rem;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-day {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.event-month {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #38220F;
+}
+
+.event-desc {
+    color: #555;
+    margin-bottom: 0.7rem;
+}
+
+.event-meta {
+    font-size: 0.98rem;
+    color: #8D6E63;
+    margin-bottom: 0.2rem;
+}
