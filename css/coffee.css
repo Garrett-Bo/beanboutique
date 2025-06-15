@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #fff; /* white */
     position: relative;
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5); /* Dark overlay */
+    background: rgba(56,34,15,0.7); /* dark brown overlay */
     z-index: 0;
 }
 
@@ -31,14 +31,14 @@
 .hero-small h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: #fff; /* white */
 }
 
 .hero-small p {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
-    color: #eee;
+    color: #fdfdfd; /* light brown */
 }
 
 /* Coffee Catalogue Grid */
@@ -56,7 +56,7 @@
 }
 
 .coffee-card {
-    background-color: #fff;
+    background-color: #fff; /* white */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;

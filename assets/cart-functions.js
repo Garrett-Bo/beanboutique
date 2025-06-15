@@ -40,5 +40,4 @@ function removeItem(idx) {
     if (typeof renderCart === 'function') renderCart();
     updateCartCount();
 }
-// Update cart count on page load
 document.addEventListener('DOMContentLoaded', updateCartCount);

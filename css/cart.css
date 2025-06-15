@@ -4,7 +4,7 @@
 
 .cart-empty {
     text-align: center;
-    color: #8D6E63;
+    color: #8D6E63; /* light brown */
     font-size: 1.2rem;
     margin: 2rem 0;
 }
@@ -12,7 +12,7 @@
 .cart-item {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: #fff; /* white */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     margin-bottom: 1.5rem;
@@ -26,7 +26,7 @@
     object-fit: cover;
     border-radius: 8px;
     margin-right: 1.5rem;
-    background: #f5f5f5;
+    background: #fff; /* white */
 }
 
 .cart-item-info {
@@ -36,18 +36,18 @@
 .cart-item-info h3 {
     margin: 0 0 0.3rem 0;
     font-size: 1.1rem;
-    color: #38220F;
+    color: #38220F; /* dark brown */
 }
 
 .cart-item-type {
     font-size: 0.95rem;
-    color: #A1887F;
+    color: #8D6E63; /* light brown */
     margin-bottom: 0.3rem;
 }
 
 .cart-item-price {
     font-size: 1rem;
-    color: #555;
+    color: #38220F; /* dark brown */
     margin-bottom: 0.5rem;
 }
 
@@ -59,8 +59,8 @@
 }
 
 .qty-btn {
-    background: #A1887F;
-    color: #fff;
+    background: #8D6E63; /* light brown */
+    color: #fff; /* white */
     border: none;
     border-radius: 50%;
     width: 28px;
@@ -71,12 +71,12 @@
 }
 
 .qty-btn:hover {
-    background: #8D6E63;
+    background: #38220F; /* dark brown */
 }
 
 .remove-btn {
     background: none;
-    color: #C62828;
+    color: #38220F; /* dark brown instead of red */
     border: none;
     font-size: 0.95rem;
     cursor: pointer;
@@ -88,14 +88,14 @@
 .cart-item-total {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #38220F;
+    color: #38220F; /* dark brown */
     margin-left: 1.5rem;
     min-width: 80px;
     text-align: right;
 }
 
 .cart-summary {
-    background: #fff;
+    background: #fff; /* white */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     padding: 1.5rem 2rem;
@@ -105,7 +105,7 @@
 
 .cart-summary-inner h3 {
     margin-top: 0;
-    color: #38220F;
+    color: #38220F; /* dark brown */
     margin-bottom: 1rem;
 }
 
@@ -117,8 +117,8 @@
 .checkout-btn {
     display: block;
     width: 100%;
-    background-color: #A1887F;
-    color: #fff;
+    background-color: #8D6E63; /* light brown */
+    color: #fff; /* white */
     padding: 0.9rem 1rem;
     border: none;
     border-radius: 4px;
@@ -129,5 +129,5 @@
 }
 
 .checkout-btn:hover {
-    background-color: #8D6E63;
+    background-color: #38220F; /* dark brown */
 }
