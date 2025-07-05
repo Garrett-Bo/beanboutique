@@ -20,7 +20,7 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (0)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
                 <button class="mobile-menu-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -33,21 +33,21 @@
     <main>
         <section class="hero">
             <div class="hero-slider">
-                <div class="hero-slide active" style="background-image: url('image/Gemini_Generated_Image_w3cudfw3cudfw3cu.png');">
+                <div class="hero-slide active" data-bg="image/Gemini_Generated_Image_w3cudfw3cudfw3cu.png">
                     <div class="hero-content">
                         <h1>Discover Your Perfect Brew</h1>
                         <p>From single-origin wonders to our signature blends, every cup tells a story.</p>
                         <a href="coffee.html" class="hero-btn">Explore Our Coffees</a>
                     </div>
                 </div>
-                <div class="hero-slide" style="background-image: url('image/Gemini_Generated_Image_3x4w1n3x4w1n3x4w.png');">
+                <div class="hero-slide" data-bg="image/Gemini_Generated_Image_3x4w1n3x4w1n3x4w.png">
                     <div class="hero-content">
                         <h1>Freshly Roasted, Always</h1>
                         <p>Experience the aroma and taste of beans roasted to perfection, just for you.</p>
                         <a href="coffee.html" class="hero-btn">Shop Fresh Roasts</a>
                     </div>
                 </div>
-                <div class="hero-slide" style="background-image: url('image/Gemini_Generated_Image_jfane1jfane1jfan.png');">
+                <div class="hero-slide" data-bg="image/Gemini_Generated_Image_jfane1jfane1jfan.png">
                     <div class="hero-content">
                         <h1>Join Our Coffee Community</h1>
                         <p>Events, tastings, and more. Be part of something special at Bean Boutique.</p>
@@ -68,9 +68,9 @@
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Ethiopian Yirgacheffe">
                         </div>
                         <div class="featured-product-content">
-                            <h3>Ethiopian Yirgacheffe</h3>
-                            <p class="tagline">Bright & Floral</p>
-                            <p>Experience the delicate notes of bergamot, citrus, and flowers. A truly elegant single-origin coffee.</p>
+                            <h3>Pour Over</h3>
+                            <p class="tagline">Clean & Bright</p>
+                            <p>Perfect for V60, Chemex, and Kalita Wave. Delicate floral and citrus notes, best enjoyed black or iced.</p>
                             <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
                         </div>
                     </div>
@@ -79,55 +79,32 @@
                             <img src="https://phoeberose.co.nz/cdn/shop/files/20241031_095335_0f5ba9b8-c673-4a5d-a6f5-2e0c3fb70d4d.jpg?v=1733877291&width=2992" alt="Brazilian Cerrado">
                         </div>
                         <div class="featured-product-content">
-                            <h3>Brazilian Cerrado</h3>
-                            <p class="tagline">Nutty & Chocolatey</p>
-                            <p>A classic full-bodied coffee with low acidity and rich notes of roasted nuts and dark chocolate. Perfect for espresso.</p>
+                            <h3>Espresso</h3>
+                            <p class="tagline">Rich & Chocolatey</p>
+                            <p>Ideal for espresso machines and moka pots. Full-bodied with chocolate and caramel notes. Great for lattes and cappuccinos.</p>
                             <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
                         </div>
                     </div>
-                    <div class="featured-product-card">
-                        <div class="featured-product-img">
-                            <img src="https://www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg" alt="Colombian Supremo">
-                        </div>
-                        <div class="featured-product-content">
-                            <h3>Colombian Supremo</h3>
-                            <p class="tagline">Balanced & Smooth</p>
-                            <p>A renowned coffee with a smooth body, bright acidity, and notes of caramel and sweet fruit. A crowd-pleaser.</p>
-                            <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
-                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section event-highlight-section">
+            <div class="container">
+                <div class="event-highlight-grid">
+                    <div class="event-highlight-content">
+                        <h2 class="section-title">Upcoming Event</h2>
+                        <h3>Coffee Tasting Night</h3>
+                        <p>Join us for an evening of coffee exploration! Learn about origins, brewing methods, and connect with fellow coffee lovers.</p>
+                        <ul>
+                            <li><strong>Date:</strong> July 20, 2025</li>
+                            <li><strong>Time:</strong> 6:00 PM – 8:00 PM</li>
+                            <li><strong>Location:</strong> Bean Boutique Café</li>
+                        </ul>
+                        <a href="events.html" class="learn-more">See All Events &rarr;</a>
                     </div>
-                    <div class="featured-product-card">
-                        <div class="featured-product-img">
-                            <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Sumatra Mandheling">
-                        </div>
-                        <div class="featured-product-content">
-                            <h3>Sumatra Mandheling</h3>
-                            <p class="tagline">Earthy & Bold</p>
-                            <p>A distinctive Indonesian coffee known for its low acidity, heavy body, and complex earthy and spicy notes.</p>
-                            <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="featured-product-card">
-                        <div class="featured-product-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Espresso Blend No. 7">
-                        </div>
-                        <div class="featured-product-content">
-                            <h3>Espresso Blend No. 7</h3>
-                            <p class="tagline">Rich & Velvety</p>
-                            <p>Our masterfully crafted house blend, designed specifically for espresso. These beans promise a creamy body...</p>
-                            <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="featured-product-card">
-                        <div class="featured-product-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Signature Cold Brew Blend">
-                        </div>
-                        <div class="featured-product-content">
-                            <h3>Signature Cold Brew Blend</h3>
-                            <p class="tagline">Smooth & Naturally Sweet | Whole Bean</p>
-                            <p>This specially selected blend of beans is optimized for cold brewing. Steeped for 18 hours, it yields an exceptionally smooth...</p>
-                            <a href="coffee.html" class="learn-more">Learn More &rarr;</a>
-                        </div>
+                    <div class="event-highlight-img">
+                        <img src="image/Gemini_Generated_Image_jfane1jfane1jfan.png" alt="Coffee Tasting Event">
                     </div>
                 </div>
             </div>
@@ -152,7 +129,7 @@
             <div class="container">
                 <h2 class="section-title">Come Checkout Where We Are</h2>
                 <div class="social-media-feed-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.972412195819!2d4.314561876654524!3d52.0802320719492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c74a93d%3A0x2f8720b09becd635!2sCoffeeshop%20Demo!5e0!3m2!1sen!2smm!4v1749964410807!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.972412195819!2d4.314561876654524!3d52.0802320719492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c74a93d%3A0x2f8720b09becd635!2sCoffeeshop%20Demo!5e0!3m2!1sen!2smm!4v1749964410807!5m2!1sen!2smm" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -177,7 +154,7 @@
                 <div class="footer-col">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></a>
                         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
                     </div>
                 </div>
@@ -197,19 +174,17 @@
         </div>
     </footer>
 
-    <div id="welcomeModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close-btn">&times;</button>
-            <h2>Welcome to Bean Boutique!</h2>
-            <p>Mail to us our newsletter and get **10% off** your first purchase!</p>
-            <form id="modalSignupForm">
-                <input type="email" placeholder="Enter your email address" required>
-                <input type="text" placeholder="Tell me what is in your mind...">
-                <button type="submit">Get My Discount</button>
-            </form>
-        </div>
+    <!-- Discount Popup Modal -->
+    <div id="discount-modal" class="modal-overlay" style="display:none;">
+      <div class="discount-modal-content">
+        <button class="close-modal" id="closeDiscountModal">&times;</button>
+        <h2>Welcome to Bean Boutique!</h2>
+        <p>Enjoy a <strong>10% discount</strong> on your first order. Click below to see our latest offers!</p>
+        <a href="offers.html" class="offers-btn">View Offers</a>
+      </div>
     </div>
 
+    <script src="assets/cart-functions.js"></script>
     <script>
         // Hero Slider Functionality
         let currentSlide = 0;
@@ -222,6 +197,7 @@
             slides.forEach((slide, i) => {
                 slide.classList.toggle('active', i === index);
             });
+            setHeroSlideBackgrounds();
         }
 
         function nextSlide() {
@@ -240,50 +216,6 @@
         // Auto-slide every 6 seconds (adjust as needed)
         setInterval(nextSlide, 6000);
 
-        // Modal Popup Functionality
-        const welcomeModal = document.getElementById('welcomeModal');
-        const modalCloseBtn = document.querySelector('.modal-close-btn');
-        const modalSignupForm = document.getElementById('modalSignupForm');
-
-        // Function to show the modal
-        function showModal() {
-            welcomeModal.style.display = 'flex';
-            // Add a small delay for the transition to apply correctly
-            setTimeout(() => welcomeModal.classList.add('show'), 10);
-        }
-
-        // Function to hide the modal
-        function hideModal() {
-            welcomeModal.classList.remove('show');
-            setTimeout(() => welcomeModal.style.display = 'none', 300); // Hide after transition
-        }
-
-        // Check if user has visited before using localStorage
-        // This simulates "first-time visitors" requirement 
-        window.addEventListener('load', () => {
-            const hasVisited = localStorage.getItem('beanBoutiqueVisited');
-            if (!hasVisited) {
-                showModal();
-                localStorage.setItem('beanBoutiqueVisited', 'true'); // Mark as visited
-            }
-        });
-
-        // Event listeners for modal close
-        modalCloseBtn.addEventListener('click', hideModal);
-        welcomeModal.addEventListener('click', (e) => {
-            if (e.target === welcomeModal) {
-                hideModal(); // Close if clicking outside the modal content
-            }
-        });
-
-        // Handle form submission (for demonstration, just alerts)
-        modalSignupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const emailInput = modalSignupForm.querySelector('input[type="email"]');
-            alert(`Thank you for signing up with ${emailInput.value}! Your 10% discount has been sent to your email.`);
-            hideModal();
-        });
-
         // Mobile menu toggle (basic, can be expanded with actual menu display logic)
         document.querySelector('.mobile-menu-button').addEventListener('click', () => {
             const navUl = document.querySelector('.main-nav ul');
@@ -296,6 +228,52 @@
             navUl.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
             navUl.style.padding = '1rem 0';
             navUl.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+        });
+
+        // Set background images for hero slides using the data-bg attribute
+        function setHeroSlideBackgrounds() {
+            document.querySelectorAll('.hero-slide[data-bg]').forEach(function(slide) {
+                var bg = slide.getAttribute('data-bg');
+                if (bg) {
+                    slide.style.backgroundImage = 'url(' + bg + ')';
+                } else {
+                    slide.style.backgroundImage = '';
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setHeroSlideBackgrounds);
+        // Also call after window load in case images are slow to load
+        window.addEventListener('load', setHeroSlideBackgrounds);
+        // Re-apply backgrounds after each slide change
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            setHeroSlideBackgrounds();
+        }
+
+        // Discount modal functionality
+        (function() {
+          if (!localStorage.getItem('beanboutique_discount_shown')) {
+            document.getElementById('discount-modal').style.display = 'flex';
+            localStorage.setItem('beanboutique_discount_shown', 'yes');
+          }
+          document.querySelector('.modal-close').onclick = function() {
+            document.getElementById('discount-modal').style.display = 'none';
+          };
+        })();
+
+        // Show popup only for first-time visitors (using localStorage)
+        window.addEventListener('DOMContentLoaded', function() {
+          // Remove previous localStorage for testing (uncomment next line to always show popup)
+          // localStorage.removeItem('discountPopupShown');
+          if (!localStorage.getItem('discountPopupShown')) {
+            document.getElementById('discount-modal').style.display = 'flex';
+            localStorage.setItem('discountPopupShown', 'true');
+          }
+          document.getElementById('closeDiscountModal').onclick = function() {
+            document.getElementById('discount-modal').style.display = 'none';
+          };
         });
     </script>
 

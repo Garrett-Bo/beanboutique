@@ -23,7 +23,7 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html" class="active">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (0)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
                 <button class="mobile-menu-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"></svg>
                 </button>
@@ -32,8 +32,8 @@
     </header>
 
     <main>
-        <section class="hero hero-small" style="background-image: url('image/Gemini_Generated_Image_p0vyw5p0vyw5p0vy.png');height:80vh;background-size:cover;background-position:center;position:relative;">
-            <div class="hero-content" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;">
+        <section class="hero hero-small" data-bg="image/Gemini_Generated_Image_p0vyw5p0vyw5p0vy.png">
+            <div class="hero-content">
                 <h1>Special Offers</h1>
                 <p>Discover our latest deals and exclusive bundles for coffee lovers.</p>
             </div>
@@ -73,6 +73,40 @@
                 </div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Subscriptions</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Monthly Coffee Subscription">
+                        <div class="offer-content">
+                            <h3>Monthly Coffee Subscription</h3>
+                            <p class="offer-desc">Get fresh, handpicked beans delivered to your door every month. Cancel anytime.</p>
+                            <ul class="subscription-details">
+                                <li><strong>Levels:</strong> Basic (1 bag), Standard (2 bags), Premium (4 bags)</li>
+                                <li><strong>Benefits:</strong> Free shipping, exclusive blends, pause or skip anytime</li>
+                                <li><strong>Perfect for:</strong> Coffee lovers who want variety and convenience</li>
+                            </ul>
+                            <button class="btn-add-to-cart" onclick="window.location.href='subscription.html'">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Barista Essentials Subscription">
+                        <div class="offer-content">
+                            <h3>Barista Essentials Subscription</h3>
+                            <p class="offer-desc">Receive a curated box of coffee gear and accessories every quarter. Perfect for enthusiasts!</p>
+                            <ul class="subscription-details">
+                                <li><strong>Levels:</strong> Essentials (gear only), Pro (gear + coffee), Ultimate (gear + coffee + accessories)</li>
+                                <li><strong>Benefits:</strong> Save up to 20%, early access to new products, exclusive tutorials</li>
+                                <li><strong>Perfect for:</strong> Home baristas and coffee explorers</li>
+                            </ul>
+                            <button class="btn-add-to-cart" onclick="window.location.href='subscription.html'">Subscribe & Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -94,7 +128,7 @@
                 <div class="footer-col">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></a>
                         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
                     </div>
                 </div>
@@ -127,6 +161,15 @@
             navUl.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
             navUl.style.padding = '1rem 0';
             navUl.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.hero.hero-small[data-bg]').forEach(function(section) {
+                var bg = section.getAttribute('data-bg');
+                if (bg) {
+                    section.style.backgroundImage = 'url(' + bg + ')';
+                }
+            });
         });
     </script>
 

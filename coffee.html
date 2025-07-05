@@ -33,8 +33,8 @@
     </header>
 
     <main>
-        <section class="hero hero-small" style="background-image: url('image/Gemini_Generated_Image_j8r1qjj8r1qjj8r1.png');height:80vh;background-size:cover;background-position:center;position:relative;">
-            <div class="hero-content" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;">
+        <section class="hero hero-small" data-bg="image/Gemini_Generated_Image_j8r1qjj8r1qjj8r1.png">
+            <div class="hero-content">
                 <h1>Our Exquisite Coffee Selection</h1>
                 <p>Explore a world of flavors, from single-origin gems to our expertly crafted blends.</p>
             </div>
@@ -55,20 +55,19 @@
                 </div>
 
                 <div class="coffee-grid" id="coffeeGrid">
-                    <div class="coffee-card" data-name="Ethiopian Yirgacheffe" data-notes="floral citrus bergamot light">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Ethiopian Yirgacheffe">
+                    <div class="coffee-card" data-name="Pour Over" data-notes="clean bright floral citrus">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Pour Over">
                         <div class="card-content">
-                            <h3>Ethiopian Yirgacheffe</h3>
-                            <p class="origin">Single Origin - Ethiopia</p>
+                            <h3>Pour Over</h3>
                             <p class="price">$15.99</p>
-                            <p class="description">A truly exceptional coffee known for its bright and clean cup.</p>
+                            <p class="description">Clean, bright, and aromatic. Perfect for those who love a delicate cup with floral and citrus notes.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Floral, bright citrus, bergamot, honey sweetness.</p>
-                                <p><strong>Brewing Method:</strong> Ideal for pour-over, Aeropress, or drip coffee.</p>
+                                <p><strong>Tasting Notes:</strong> Jasmine, lemon, bergamot, honey</p>
+                                <p><strong>Recommended Brewing:</strong> V60, Chemex, Kalita Wave</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Ethiopian Yirgacheffe',
+        name: 'Pour Over',
         price: 15.99,
         img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s',
         type: 'Coffee'
@@ -76,20 +75,19 @@
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Brazilian Cerrado" data-notes="nutty chocolate caramel bold">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7jQEFv6zYt_Nw5kVK4Wq-nBIU3x6e6o1HD5eT0UhN4SlEjHeRoPIxxAJIZEIATytQ9E&usqp=CAU" alt="Brazilian Cerrado">
+                    <div class="coffee-card" data-name="Espresso" data-notes="rich chocolatey bold">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7jQEFv6zYt_Nw5kVK4Wq-nBIU3x6e6o1HD5eT0UhN4SlEjHeRoPIxxAJIZEIATytQ9E&usqp=CAU" alt="Espresso">
                         <div class="card-content">
-                            <h3>Brazilian Cerrado</h3>
-                            <p class="origin">Single Origin - Brazil</p>
+                            <h3>Espresso</h3>
                             <p class="price">$13.99</p>
-                            <p class="description">A classic, full-bodied coffee with low acidity and a smooth finish.</p>
+                            <p class="description">Full-bodied and smooth, with notes of chocolate and caramel. Ideal for espresso lovers.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Roasted nuts, dark chocolate, caramel, balanced.</p>
-                                <p><strong>Brewing Method:</strong> Excellent for espresso, French press, or drip coffee.</p>
+                                <p><strong>Tasting Notes:</strong> Roasted nuts, dark chocolate, caramel</p>
+                                <p><strong>Recommended Brewing:</strong> Espresso Machine, Moka Pot</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Brazilian Cerrado',
+        name: 'Espresso',
         price: 13.99,
         img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7jQEFv6zYt_Nw5kVK4Wq-nBIU3x6e6o1HD5eT0UhN4SlEjHeRoPIxxAJIZEIATytQ9E&usqp=CAU',
         type: 'Coffee'
@@ -97,20 +95,19 @@
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Colombian Supremo" data-notes="balanced smooth caramel fruity">
-                        <img src="https://www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg" alt="Colombian Supremo">
+                    <div class="coffee-card" data-name="French Press" data-notes="smooth balanced sweet">
+                        <img src="https://www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg" alt="French Press">
                         <div class="card-content">
-                            <h3>Colombian Supremo</h3>
-                            <p class="origin">Single Origin - Colombia</p>
+                            <h3>French Press</h3>
                             <p class="price">$14.99</p>
-                            <p class="description">A renowned, consistently smooth coffee with a delightful aroma.</p>
+                            <p class="description">Sweet, mellow, and easy to brew. Great for a classic French Press experience.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Sweet, citrus, caramel, mild fruitiness, clean finish.</p>
-                                <p><strong>Brewing Method:</strong> Versatile for most methods, especially drip and Aeropress.</p>
+                                <p><strong>Tasting Notes:</strong> Caramel, citrus, mild fruit, clean finish</p>
+                                <p><strong>Recommended Brewing:</strong> French Press, Aeropress</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Colombian Supremo',
+        name: 'French Press',
         price: 14.99,
         img: 'https:\//www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg',
         type: 'Coffee'
@@ -118,20 +115,19 @@
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Sumatra Mandheling" data-notes="earthy bold spicy woody dark">
-                        <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Sumatra Mandheling">
+                    <div class="coffee-card" data-name="Cold Brew" data-notes="earthy bold low-acidity">
+                        <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Cold Brew">
                         <div class="card-content">
-                            <h3>Sumatra Mandheling</h3>
-                            <p class="origin">Single Origin - Indonesia</p>
+                            <h3>Cold Brew</h3>
                             <p class="price">$16.49</p>
-                            <p class="description">A distinctive coffee with a heavy body and complex, earthy notes.</p>
+                            <p class="description">Earthy and bold, with a syrupy body and low acidity. Perfect for cold brew and iced coffee drinks.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Earthy, dark chocolate, mild spice, low acidity.</p>
-                                <p><strong>Brewing Method:</strong> Great for French press, espresso, and cold brew.</p>
+                                <p><strong>Tasting Notes:</strong> Earth, dark chocolate, spice</p>
+                                <p><strong>Recommended Brewing:</strong> Cold Brew, French Press</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Sumatra Mandheling',
+        name: 'Cold Brew',
         price: 16.49,
         img: 'https\://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg',
         type: 'Coffee'
@@ -139,20 +135,19 @@
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Espresso Blend No. 7" data-notes="rich velvety dark chocolate caramel strong">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Espresso Blend No. 7">
+                    <div class="coffee-card" data-name="Mocha" data-notes="chocolate espresso creamy">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Mocha">
                         <div class="card-content">
-                            <h3>Espresso Blend No. 7</h3>
-                            <p class="origin">Signature Blend</p>
+                            <h3>Mocha</h3>
                             <p class="price">$15.49</p>
-                            <p class="description">Our masterfully crafted house blend, optimized for exceptional espresso.</p>
+                            <p class="description">A rich blend for those who love chocolatey espresso drinks and creamy textures.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Rich, dark chocolate, caramel, creamy body, hints of roasted almond.</p>
-                                <p><strong>Brewing Method:</strong> Exclusively designed for espresso machines.</p>
+                                <p><strong>Tasting Notes:</strong> Dark chocolate, caramel, roasted almond</p>
+                                <p><strong>Recommended Brewing:</strong> Espresso, Moka Pot</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Espresso Blend No. 7',
+        name: 'Mocha',
         price: 15.49,
         img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s',
         type: 'Coffee'
@@ -160,20 +155,19 @@
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Signature Cold Brew Blend" data-notes="smooth naturally sweet chocolate low acidity">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Signature Cold Brew Blend">
+                    <div class="coffee-card" data-name="Specialty Iced" data-notes="sweet refreshing chocolate">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Specialty Iced">
                         <div class="card-content">
-                            <h3>Signature Cold Brew Blend</h3>
-                            <p class="origin">Specialty Blend</p>
+                            <h3>Specialty Iced</h3>
                             <p class="price">$13.49</p>
-                            <p class="description">This blend is meticulously selected for a naturally smooth and sweet cold brew.</p>
+                            <p class="description">Naturally sweet and smooth, designed for refreshing cold brews and iced lattes.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Smooth chocolate, low acidity, subtle fruitiness, refreshing.</p>
-                                <p><strong>Brewing Method:</strong> Best brewed as a cold brew, steeped for 12-24 hours.</p>
+                                <p><strong>Tasting Notes:</strong> Chocolate, low acidity, subtle fruit</p>
+                                <p><strong>Recommended Brewing:</strong> Cold Brew, Iced Coffee</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Signature Cold Brew Blend',
+        name: 'Specialty Iced',
         price: 13.49,
         img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU',
         type: 'Coffee'
@@ -276,6 +270,14 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.hero.hero-small[data-bg]').forEach(function(section) {
+        var bg = section.getAttribute('data-bg');
+        if (bg) {
+            section.style.backgroundImage = 'url(' + bg + ')';
+        }
+    });
+});
     </script>
 
 </body>
