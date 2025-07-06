@@ -11,9 +11,17 @@
 </head>
 <body>
 
+
     <header class="main-header">
         <div class="container">
             <nav class="main-nav">
+                <button class="mobile-menu-button" aria-label="Open navigation menu">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
                 <a href="index.html" class="logo">Bean Boutique</a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,17 +31,12 @@
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
                 <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
-                <button class="mobile-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero hero-small" data-bg="image/Gemini_Generated_Image_j8r1qjj8r1qjj8r1.png">
+        <section class="hero hero-small" style="background-image: url('https://images.unsplash.com/photo-1510698118247-fec51419736c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');">
             <div class="hero-content">
                 <h1>Our Exquisite Coffee Selection</h1>
                 <p>Explore a world of flavors, from single-origin gems to our expertly crafted blends.</p>
@@ -48,128 +51,122 @@
                     <input type="text" id="coffeeSearchInput" placeholder="Search for coffee by name" class="search-input">
                 </div>
 
-                <div class="another-plugin-placeholder">
-                   <b>
-                     <p>"From origin to roast, discover the bean that speaks to your senses."</p>
-                   </b>
-                </div>
-
                 <div class="coffee-grid" id="coffeeGrid">
-                    <div class="coffee-card" data-name="Pour Over" data-notes="clean bright floral citrus">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Pour Over">
+                    <div class="coffee-card" data-name="Ethiopian Yirgacheffe" data-notes="floral citrus bergamot light">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s" alt="Ethiopian Yirgacheffe">
                         <div class="card-content">
-                            <h3>Pour Over</h3>
-                            <p class="price">$15.99</p>
-                            <p class="description">Clean, bright, and aromatic. Perfect for those who love a delicate cup with floral and citrus notes.</p>
+                            <h3>Ethiopian Yirgacheffe</h3>
+                            <p class="origin">Single Origin - Ethiopia</p>
+                            <p class="description">A truly exceptional coffee known for its bright and clean cup.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Jasmine, lemon, bergamot, honey</p>
-                                <p><strong>Recommended Brewing:</strong> V60, Chemex, Kalita Wave</p>
+                                <p><strong>Tasting Notes:</strong> Floral, bright citrus, bergamot, honey sweetness.</p>
+                                <p><strong>Brewing Method:</strong> Ideal for pour-over, Aeropress, or drip coffee.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Pour Over',
+        name: 'Ethiopian Yirgacheffe',
         price: 15.99,
-        img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfSLDMYg16bjXeEB0gEy175_TuvY-SqU9kw&s',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Espresso" data-notes="rich chocolatey bold">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7jQEFv6zYt_Nw5kVK4Wq-nBIU3x6e6o1HD5eT0UhN4SlEjHeRoPIxxAJIZEIATytQ9E&usqp=CAU" alt="Espresso">
+                    <div class="coffee-card" data-name="Brazilian Cerrado" data-notes="nutty chocolate caramel bold">
+                        <img src="https://phoeberose.co.nz/cdn/shop/files/20241031_095335_0f5ba9b8-c673-4a5d-a6f5-2e0c3fb70d4d.jpg?v=1733877291&width=2992" alt="Brazilian Cerrado">
                         <div class="card-content">
-                            <h3>Espresso</h3>
-                            <p class="price">$13.99</p>
-                            <p class="description">Full-bodied and smooth, with notes of chocolate and caramel. Ideal for espresso lovers.</p>
+                            <h3>Brazilian Cerrado</h3>
+                            <p class="origin">Single Origin - Brazil</p>
+                            <p class="description">A classic, full-bodied coffee with low acidity and a smooth finish.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Roasted nuts, dark chocolate, caramel</p>
-                                <p><strong>Recommended Brewing:</strong> Espresso Machine, Moka Pot</p>
+                                <p><strong>Tasting Notes:</strong> Roasted nuts, dark chocolate, caramel, balanced.</p>
+                                <p><strong>Brewing Method:</strong> Excellent for espresso, French press, or drip coffee.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Espresso',
+        name: 'Brazilian Cerrado',
         price: 13.99,
-        img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7jQEFv6zYt_Nw5kVK4Wq-nBIU3x6e6o1HD5eT0UhN4SlEjHeRoPIxxAJIZEIATytQ9E&usqp=CAU',
+        img: 'https://phoeberose.co.nz/cdn/shop/files/20241031_095335_0f5ba9b8-c673-4a5d-a6f5-2e0c3fb70d4d.jpg?v=1733877291&width=2992',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="French Press" data-notes="smooth balanced sweet">
-                        <img src="https://www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg" alt="French Press">
+                    <div class="coffee-card" data-name="Colombian Supremo" data-notes="balanced smooth caramel fruity">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1b2k3g4c7j6J5X8Y1Zy7f2x4s5z8Fq3e9Ww&s" alt="Colombian Supremo">
                         <div class="card-content">
-                            <h3>French Press</h3>
-                            <p class="price">$14.99</p>
-                            <p class="description">Sweet, mellow, and easy to brew. Great for a classic French Press experience.</p>
+                            <h3>Colombian Supremo</h3>
+                            <p class="origin">Single Origin - Colombia</p>
+                            <p class="description">A renowned, consistently smooth coffee with a delightful aroma.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Caramel, citrus, mild fruit, clean finish</p>
-                                <p><strong>Recommended Brewing:</strong> French Press, Aeropress</p>
+                                <p><strong>Tasting Notes:</strong> Sweet, citrus, caramel, mild fruitiness, clean finish.</p>
+                                <p><strong>Brewing Method:</strong> Versatile for most methods, especially drip and Aeropress.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'French Press',
+        name: 'Colombian Supremo',
         price: 14.99,
-        img: 'https:\//www.thecoffeepod.co.uk/contents/media/l_coffee%20beans%20sack_000_.jpg',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1b2k3g4c7j6J5X8Y1Zy7f2x4s5z8Fq3e9Ww&s',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Cold Brew" data-notes="earthy bold low-acidity">
-                        <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Cold Brew">
+                    <div class="coffee-card" data-name="Sumatra Mandheling" data-notes="earthy bold spicy woody dark">
+                        <img src="https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg" alt="Sumatra Mandheling">
                         <div class="card-content">
-                            <h3>Cold Brew</h3>
-                            <p class="price">$16.49</p>
-                            <p class="description">Earthy and bold, with a syrupy body and low acidity. Perfect for cold brew and iced coffee drinks.</p>
+                            <h3>Sumatra Mandheling</h3>
+                            <p class="origin">Single Origin - Indonesia</p>
+                            <p class="description">A distinctive coffee with a heavy body and complex, earthy notes.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Earth, dark chocolate, spice</p>
-                                <p><strong>Recommended Brewing:</strong> Cold Brew, French Press</p>
+                                <p><strong>Tasting Notes:</strong> Earthy, dark chocolate, mild spice, low acidity.</p>
+                                <p><strong>Brewing Method:</strong> Great for French press, espresso, and cold brew.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Cold Brew',
+        name: 'Sumatra Mandheling',
         price: 16.49,
-        img: 'https\://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg',
+        img: 'https://espressocoffeeguide.com/wp-content/uploads/2010/05/sumatramandheling-coffee-beans.jpg',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Mocha" data-notes="chocolate espresso creamy">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Mocha">
+                    <div class="coffee-card" data-name="Espresso Blend No. 7" data-notes="rich velvety dark chocolate caramel strong">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s" alt="Espresso Blend No. 7">
                         <div class="card-content">
-                            <h3>Mocha</h3>
-                            <p class="price">$15.49</p>
-                            <p class="description">A rich blend for those who love chocolatey espresso drinks and creamy textures.</p>
+                            <h3>Espresso Blend No. 7</h3>
+                            <p class="origin">Signature Blend</p>
+                            <p class="description">Our masterfully crafted house blend, optimized for exceptional espresso.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Dark chocolate, caramel, roasted almond</p>
-                                <p><strong>Recommended Brewing:</strong> Espresso, Moka Pot</p>
+                                <p><strong>Tasting Notes:</strong> Rich, dark chocolate, caramel, creamy body, hints of roasted almond.</p>
+                                <p><strong>Brewing Method:</strong> Exclusively designed for espresso machines.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Mocha',
+        name: 'Espresso Blend No. 7',
         price: 15.49,
-        img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK37sGnOywi4uaAQipQtsq5oczglzGVQx5jw&s',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="coffee-card" data-name="Specialty Iced" data-notes="sweet refreshing chocolate">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Specialty Iced">
+                    <div class="coffee-card" data-name="Signature Cold Brew Blend" data-notes="smooth naturally sweet chocolate low acidity">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU" alt="Signature Cold Brew Blend">
                         <div class="card-content">
-                            <h3>Specialty Iced</h3>
-                            <p class="price">$13.49</p>
-                            <p class="description">Naturally sweet and smooth, designed for refreshing cold brews and iced lattes.</p>
+                            <h3>Signature Cold Brew Blend</h3>
+                            <p class="origin">Specialty Blend</p>
+                            <p class="description">This blend is meticulously selected for a naturally smooth and sweet cold brew.</p>
                             <div class="details">
-                                <p><strong>Tasting Notes:</strong> Chocolate, low acidity, subtle fruit</p>
-                                <p><strong>Recommended Brewing:</strong> Cold Brew, Iced Coffee</p>
+                                <p><strong>Tasting Notes:</strong> Smooth chocolate, low acidity, subtle fruitiness, refreshing.</p>
+                                <p><strong>Brewing Method:</strong> Best brewed as a cold brew, steeped for 12-24 hours.</p>
                             </div>
                             <button class="btn-add-to-cart"
     onclick="addToCart({
-        name: 'Specialty Iced',
+        name: 'Signature Cold Brew Blend',
         price: 13.49,
-        img: 'https\://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEGe_Ab_mo1ZGv0dRdLRsPm0B_LbF7smewbm0uH69cXzgod615K_VrsbueLGQDovtF_Bw&usqp=CAU',
         type: 'Coffee'
     })">Add to Cart</button>
                         </div>
@@ -179,40 +176,17 @@
             </div>
         </section>
     </main>
-
+    <div class="another-plugin-placeholder">
+        <b>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jdguVU0F7fs?si=07uTZfgJxf9bkyfu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>"From origin to roast, discover the bean that speaks to your senses."</p>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLt-pnUpq-B/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DLt-pnUpq-B/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DLt-pnUpq-B/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Cafe Story x ติดเล่า (@cafestorythailand)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+        </b>
+    </div>
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Bean Boutique</h3>
-                    <p>Sourcing and roasting the world's finest coffee since 2023.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="coffee.html">Our Coffees</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16.02 6.13,17.26 8.13,17.29C6.67,18.45 4.82,19.11 2.83,19.11C2.47,19.11 2.12,19.09 1.77,19.04C3.78,20.36 6.15,21.14 8.75,21.14C16.01,21.14 20.24,15.22 20.24,10.01C20.24,9.82 20.24,9.64 20.23,9.45C21.02,8.9 21.72,8.21 22.28,7.39L22.46,6Z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Sign up for updates on new arrivals and special offers.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" style="text-align:center; padding: 2rem 0 1rem 0;">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
                 <p>Designed with &hearts; in-house. No templates were used.</p>
             </div>
@@ -270,14 +244,63 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.hero.hero-small[data-bg]').forEach(function(section) {
-        var bg = section.getAttribute('data-bg');
-        if (bg) {
-            section.style.backgroundImage = 'url(' + bg + ')';
+    </script>
+
+
+    <script>
+        // --- MOBILE NAVBAR LOGIC ---
+        const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+        const navUl = document.querySelector('.main-nav ul');
+        const logo = document.querySelector('.main-nav .logo');
+        const cartBtn = document.querySelector('.btn-cart');
+
+        function closeMobileMenu() {
+            navUl.classList.remove('show');
+            mobileMenuBtn.classList.remove('open');
         }
-    });
-});
+        function openMobileMenu() {
+            navUl.classList.add('show');
+            mobileMenuBtn.classList.add('open');
+        }
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (navUl.classList.contains('show')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth < 1024 && navUl.classList.contains('show')) {
+                if (!navUl.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) {
+                navUl.classList.remove('show');
+                navUl.style.display = 'flex';
+                navUl.style.flexDirection = 'row';
+                navUl.style.position = 'static';
+                navUl.style.backgroundColor = 'transparent';
+                navUl.style.boxShadow = 'none';
+            } else {
+                closeMobileMenu();
+            }
+        });
+        // Smaller logo font for mobile
+        function updateLogoFont() {
+            if (window.innerWidth < 600) {
+                logo.style.fontSize = '1.2rem';
+                logo.style.letterSpacing = '0.5px';
+            } else {
+                logo.style.fontSize = '';
+                logo.style.letterSpacing = '';
+            }
+        }
+        window.addEventListener('resize', updateLogoFont);
+        document.addEventListener('DOMContentLoaded', updateLogoFont);
     </script>
 
 </body>

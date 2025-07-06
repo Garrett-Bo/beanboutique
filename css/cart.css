@@ -187,12 +187,16 @@
     font-weight: 500;
     cursor: pointer;
 }
-.pay-icon {
+#visa{
+    height: 22px;
+    vertical-align: middle;
+}
+.pay-icon #paypal {
     height: 22px;
     vertical-align: middle;
 }
 .bank-icon {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 .payment-fields {
     width: 100%;
