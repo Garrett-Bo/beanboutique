@@ -11,6 +11,13 @@
         <div class="container">
             <nav class="main-nav">
                 <a href="index.html" class="logo">Bean Boutique</a>
+                <button class="mobile-menu-button" aria-label="Open navigation menu">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="coffee.html">Coffee</a></li>
@@ -18,12 +25,7 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (0)</a>
-                <button class="mobile-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
             </nav>
         </div>
     </header>
@@ -45,7 +47,7 @@
                         <textarea id="address" name="address" rows="3" required></textarea>
                         <button type="submit" class="offers-btn">Submit</button>
                     </form>
-                    <div id="subscriptionSuccess" class="success-message" style="display:none;">
+                    <div id="subscriptionSuccess" class="success-message hidden">
                         <h3>Thank you for subscribing!</h3>
                         <p>Your subscription registration has been received. Check your email for confirmation and next steps.</p>
                     </div>
@@ -92,12 +94,70 @@
         </div>
     </footer>
 
+    <script src="assets/cart-functions.js"></script>
     <script>
+    // Subscription form logic
     document.getElementById('subscriptionForm').onsubmit = function(e) {
         e.preventDefault();
         document.getElementById('subscriptionForm').style.display = 'none';
         document.getElementById('subscriptionSuccess').style.display = 'block';
     };
+    // Update cart count on page load
+    updateCartCount();
+
+    // --- MOBILE NAVBAR LOGIC ---
+    const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+    const navUl = document.querySelector('.main-nav ul');
+    const logo = document.querySelector('.main-nav .logo');
+    const cartBtn = document.querySelector('.btn-cart');
+
+    function closeMobileMenu() {
+        navUl.classList.remove('show');
+        mobileMenuBtn.classList.remove('open');
+    }
+    function openMobileMenu() {
+        navUl.classList.add('show');
+        mobileMenuBtn.classList.add('open');
+    }
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (navUl.classList.contains('show')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    });
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth < 1024 && navUl.classList.contains('show')) {
+            if (!navUl.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        }
+    });
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 1024) {
+            navUl.classList.remove('show');
+            navUl.style.display = 'flex';
+            navUl.style.flexDirection = 'row';
+            navUl.style.position = 'static';
+            navUl.style.backgroundColor = 'transparent';
+            navUl.style.boxShadow = 'none';
+        } else {
+            closeMobileMenu();
+        }
+    });
+    // Smaller logo font for mobile
+    function updateLogoFont() {
+        if (window.innerWidth < 600) {
+            logo.style.fontSize = '1.2rem';
+            logo.style.letterSpacing = '0.5px';
+        } else {
+            logo.style.fontSize = '';
+            logo.style.letterSpacing = '';
+        }
+    }
+    window.addEventListener('resize', updateLogoFont);
+    document.addEventListener('DOMContentLoaded', updateLogoFont);
     </script>
 </body>
 </html>

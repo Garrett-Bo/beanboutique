@@ -35,7 +35,7 @@
     </header>
 
     <main>
-        <section class="hero hero-small" data-bg="image/Gemini_Generated_Image_djk5nudjk5nudjk5.png">
+        <section class="hero hero-small" data-bg="image/cart-hero.png">
             <div class="hero-content">
                 <h1>Your Cart</h1>
                 <p>Review your selected coffees and equipment before checkout.</p>
@@ -43,6 +43,7 @@
         </section>
 
         <section class="section">
+            <h2 class="visually-hidden">Cart Details</h2>
             <div class="container">
                 <div id="cart-container">
                     <!-- Cart items will be rendered here -->
@@ -56,13 +57,13 @@
 
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-bottom" style="text-align:center; padding: 2rem 0 1rem 0;">
+            <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
                 <p>Designed with &hearts; in-house. No templates were used.</p>
             </div>
         </div>
     </footer>
-
+    <script src="assets/cart-functions.js"></script>
     <script>
     // --- Cart Logic ---
 
@@ -137,18 +138,18 @@
                                 <input type="text" placeholder="CVV" maxlength="4" class="modern-input" required>
                             </div>
                         </div>
-                        <div id="paypal-fields" style="display:none;">
+                        <div id="paypal-fields" class="hidden">
                             <input type="email" placeholder="PayPal Email" class="modern-input" required>
                         </div>
-                        <div id="bank-fields" style="display:none;">
+                        <div id="bank-fields" class="hidden">
                             <input type="text" placeholder="Bank Account Number" class="modern-input" required>
                             <input type="text" placeholder="Account Holder Name" class="modern-input" required>
                         </div>
                     </div>
                 </div>
-                <button class="checkout-btn modern-checkout" id="submitOrderBtn" style="margin-top:0.5rem;background:#38220F;">Submit Order</button>
+                <button class="checkout-btn modern-checkout" id="submitOrderBtn">Submit Order</button>
             </div>
-            <div id="payment-complete-modal" class="modal-overlay" style="display:none;">
+            <div id="payment-complete-modal" class="modal-overlay">
                 <div class="discount-modal-content">
                     <button class="close-modal" id="closePaymentComplete">&times;</button>
                     <h3>Payment Complete!</h3>
@@ -159,10 +160,17 @@
         // Attach event listeners after rendering
         document.querySelectorAll('input[name="payment"]').forEach(function(radio) {
             radio.addEventListener('change', function() {
-                document.getElementById('card-fields').style.display = this.value === 'visa' ? '' : 'none';
-                document.getElementById('paypal-fields').style.display = this.value === 'paypal' ? '' : 'none';
-                document.getElementById('bank-fields').style.display = this.value === 'bank' ? '' : 'none';
+                document.getElementById('card-fields').classList.toggle('hidden', this.value !== 'visa');
+                document.getElementById('paypal-fields').classList.toggle('hidden', this.value !== 'paypal');
+                document.getElementById('bank-fields').classList.toggle('hidden', this.value !== 'bank');
             });
+        // Set initial visibility based on checked payment option
+        var checked = document.querySelector('input[name="payment"]:checked');
+        if (checked) {
+            document.getElementById('card-fields').classList.toggle('hidden', checked.value !== 'visa');
+            document.getElementById('paypal-fields').classList.toggle('hidden', checked.value !== 'paypal');
+            document.getElementById('bank-fields').classList.toggle('hidden', checked.value !== 'bank');
+        }
         });
         document.getElementById('closePaymentComplete').onclick = function() {
             document.getElementById('payment-complete-modal').style.display = 'none';
@@ -269,7 +277,6 @@
         });
     });
     </script>
-</main>
 
     <script>
         // --- MOBILE NAVBAR LOGIC ---

@@ -1,3 +1,25 @@
+/* Remove inline style for .footer-bottom and .social-media-section spacing */
+.footer-bottom {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #4E342E;
+    color: #A1887F;
+    font-size: 0.95rem;
+}
+
+.section.social-media-section {
+    margin-bottom: 100px;
+}
+/* Add spacing between all main sections on the homepage */
+.section {
+    margin-bottom: 100px;
+}
+
+/* Add upper margin above the Featured This Week section */
+.featured-this-week-section {
+    margin-top: 80px;
+}
 /* Modern, mobile-friendly footer styles */
 /* Minimal, unified footer for all pages */
 .main-footer {
