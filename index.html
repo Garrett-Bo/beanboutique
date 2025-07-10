@@ -9,12 +9,12 @@
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <a href="index.html" class="logo">Bean Boutique</a>
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -27,14 +27,14 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main role="main">
         <section class="hero">
-            <div class="hero-slider">
+            <div class="hero-slider" role="region" aria-label="Featured slides">
                 <div class="hero-slide active" data-bg="image/hero-slide-1.png">
                     <div class="hero-content">
                         <h1>Discover Your Perfect Brew</h1>
@@ -56,8 +56,8 @@
                         <a href="events.html" class="hero-btn">See Events</a>
                     </div>
                 </div>
-                <button class="hero-prev">&#10094;</button>
-                <button class="hero-next">&#10095;</button>
+                <button class="hero-prev" aria-label="Previous slide" tabindex="0">&#10094;</button>
+                <button class="hero-next" aria-label="Next slide" tabindex="0">&#10095;</button>
             </div>
         </section>
 
@@ -114,12 +114,12 @@
 
         <section class="section">
             <div class="container">
-                <div class="about-us">
+                <div class="about-us" role="region" aria-label="About Bean Boutique">
                     <div class="about-us-img">
-                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0i-LGnCXidyHWyengQfMjNNL-Sm2pndqGdKEdjzSXuHb54JJYT86wTC2WvDmLhX6luLBm_C_-fm1B9u7uxiJXEHKJXHvtEOT60VHWKOUWMjAA11Vp-G1R_Z9aB7IP2gtjsvkX?key=P_fBfCvzTGRSkPMfj522Ng" alt="Bean Boutique Cafe Interior">
+                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0i-LGnCXidyHWyengQfMjNNL-Sm2pndqGdKEdjzSXuHb54JJYT86wTC2WvDmLhX6luLBm_C_-fm1B9u7uxiJXEHKJXHvtEOT60VHWKOUWMjAA11Vp-G1R_Z9aB7IP2gtjsvkX?key=P_fBfCvzTGRSkPMfj522Ng" alt="Bean Boutique Cafe Interior" aria-describedby="about-us-desc">
                     </div>
                     <div class="about-us-content">
-                        <h2>Our Story</h2>
+                        <h2 id="about-us-desc">Our Story</h2>
                         <p>Bean Boutique was born from a passion for exceptional coffee and the community it creates. We travel the world to source the finest beans, roasting them with care in small batches to bring out their unique flavors.</p>
                         <p>We believe coffee is more than just a drink—it's an experience. Join us in our cafe or bring the boutique experience home.</p>
                     </div>
@@ -130,14 +130,14 @@
         <section class="section social-media-section">
             <div class="container">
                 <h2 class="section-title">Come Checkout Where We Are</h2>
-                <div class="social-media-feed-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.972412195819!2d4.314561876654524!3d52.0802320719492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c74a93d%3A0x2f8720b09becd635!2sCoffeeshop%20Demo!5e0!3m2!1sen!2smm!4v1749964410807!5m2!1sen!2smm" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="social-media-feed-placeholder" role="region" aria-label="Our Location on Map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.972412195819!2d4.314561876654524!3d52.0802320719492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c74a93d%3A0x2f8720b09becd635!2sCoffeeshop%20Demo!5e0!3m2!1sen!2smm!4v1749964410807!5m2!1sen!2smm" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique Location Map" aria-label="Map showing the location of Bean Boutique Cafe"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>

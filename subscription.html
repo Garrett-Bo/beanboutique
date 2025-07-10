@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/hompage.css">
 </head>
 <body>
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <a href="index.html" class="logo">Bean Boutique</a>
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -25,29 +25,29 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
-    <main>
+    <main role="main">
         <section class="section">
             <div class="container">
                 <div class="subscription-center">
                     <h2 class="section-title">Subscription Registration</h2>
-                    <form id="subscriptionForm" class="subscription-form">
+                    <form id="subscriptionForm" class="subscription-form" aria-label="Subscription registration form">
                         <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required>
+                        <input type="text" id="firstName" name="firstName" required aria-required="true">
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" required>
+                        <input type="text" id="lastName" name="lastName" required aria-required="true">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required aria-required="true">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" required aria-required="true">
                         <label for="address">Address</label>
-                        <textarea id="address" name="address" rows="3" required></textarea>
+                        <textarea id="address" name="address" rows="3" required aria-required="true"></textarea>
                         <button type="submit" class="offers-btn">Submit</button>
                     </form>
-                    <div id="subscriptionSuccess" class="success-message hidden">
+                    <div id="subscriptionSuccess" class="success-message hidden" aria-live="polite">
                         <h3>Thank you for subscribing!</h3>
                         <p>Your subscription registration has been received. Check your email for confirmation and next steps.</p>
                     </div>
@@ -55,7 +55,7 @@
             </div>
         </section>
     </main>
-       <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
@@ -78,18 +78,6 @@
                         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Sign up for updates on new arrivals and special offers.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
-                <p>Designed with &hearts; in-house. No templates were used.</p>
             </div>
         </div>
     </footer>

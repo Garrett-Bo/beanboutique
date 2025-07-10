@@ -11,12 +11,12 @@
 <body>
 
 
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <a href="index.html" class="logo">Bean Boutique</a>
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -29,35 +29,35 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero hero-small" data-bg="image/coffee-hero.png">
+    <main role="main">
+        <section class="hero hero-small" data-bg="image/coffee-hero.png" role="region" aria-label="Coffee Page Hero">
             <div class="hero-content">
                 <h1>Our Exquisite Coffee Selection</h1>
                 <p>Explore a world of flavors, from single-origin gems to our expertly crafted blends.</p>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" role="region" aria-label="Coffee Catalogue">
             <div class="container">
                 <h2 class="section-title">Discover Your Next Favorite Brew</h2>
 
-                <div class="search-bar-plugin">
-                    <input type="text" id="coffeeSearchInput" placeholder="Search for coffee by name" class="search-input">
+                <div class="search-bar-plugin" role="search" aria-label="Coffee search">
+                    <input type="text" id="coffeeSearchInput" placeholder="Search for coffee by name" class="search-input" aria-label="Search for coffee by name">
                 </div>
 
-                <div class="coffee-grid" id="coffeeGrid">
+                <div class="coffee-grid" id="coffeeGrid" role="list" aria-label="Coffee products">
 
                     <div class="coffee-card" data-name="Espresso" data-notes="strong rich crema classic">
-                        <img src="https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe04.jpg" alt="Espresso">
+                        <img src="https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe04.jpg" alt="Espresso" aria-describedby="espressoDesc">
                         <div class="card-content">
                             <h3>Espresso</h3>
                             <p class="origin">Classic Italian Drink</p>
-                            <p class="description">A concentrated shot of coffee with a rich crema, the foundation of all coffee drinks.</p>
+                            <p class="description" id="espressoDesc">A concentrated shot of coffee with a rich crema, the foundation of all coffee drinks.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Intense, bold, creamy, aromatic.</p>
                                 <p><strong>Served:</strong> Solo or as a base for other drinks.</p>
@@ -73,11 +73,11 @@
                     </div>
 
                     <div class="coffee-card" data-name="Cappuccino" data-notes="creamy frothy balanced">
-                        <img src="https://tchibo.us/cdn/shop/articles/cappucino.jpg?v=1690196460&width=1440" alt="Cappuccino">
+                        <img src="https://tchibo.us/cdn/shop/articles/cappucino.jpg?v=1690196460&width=1440" alt="Cappuccino" aria-describedby="cappuccinoDesc">
                         <div class="card-content">
                             <h3>Cappuccino</h3>
                             <p class="origin">Italian Coffee Drink</p>
-                            <p class="description">A harmonious blend of espresso, steamed milk, and a thick layer of milk foam.</p>
+                            <p class="description" id="cappuccinoDesc">A harmonious blend of espresso, steamed milk, and a thick layer of milk foam.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Creamy, smooth, balanced, frothy top.</p>
                                 <p><strong>Served:</strong> In a cup, often dusted with cocoa.</p>
@@ -93,11 +93,11 @@
                     </div>
 
                     <div class="coffee-card" data-name="Latte" data-notes="milky smooth mellow">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3fGm6VkKhLBLhqO53AGZZIMYiFsACD95AmA&s" alt="Latte">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3fGm6VkKhLBLhqO53AGZZIMYiFsACD95AmA&s" alt="Latte" aria-describedby="latteDesc">
                         <div class="card-content">
                             <h3>Latte</h3>
                             <p class="origin">Espresso-Based Drink</p>
-                            <p class="description">A smooth, milky coffee with a gentle espresso kick and silky microfoam.</p>
+                            <p class="description" id="latteDesc">A smooth, milky coffee with a gentle espresso kick and silky microfoam.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Mellow, creamy, subtle coffee flavor.</p>
                                 <p><strong>Served:</strong> In a tall glass, often with latte art.</p>
@@ -113,11 +113,11 @@
                     </div>
 
                     <div class="coffee-card" data-name="Americano" data-notes="smooth diluted classic">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStB5pd9nTcodZwacklomjyS5evO4SZT613mw&s" alt="Americano">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStB5pd9nTcodZwacklomjyS5evO4SZT613mw&s" alt="Americano" aria-describedby="americanoDesc">
                         <div class="card-content">
                             <h3>Pour Over</h3>
                             <p class="origin">Espresso-Based Drink</p>
-                            <p class="description">Espresso diluted with hot water for a smooth, long coffee experience.</p>
+                            <p class="description" id="americanoDesc">Espresso diluted with hot water for a smooth, long coffee experience.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Smooth, less intense, classic coffee taste.</p>
                                 <p><strong>Served:</strong> In a mug, hot or iced.</p>
@@ -133,11 +133,11 @@
                     </div>
 
                     <div class="coffee-card" data-name="Mocha" data-notes="chocolate sweet creamy">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mocha_coffee.jpg/500px-Mocha_coffee.jpg" alt="Mocha">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mocha_coffee.jpg/500px-Mocha_coffee.jpg" alt="Mocha" aria-describedby="mochaDesc">
                         <div class="card-content">
                             <h3>Mocha</h3>
                             <p class="origin">Espresso & Chocolate</p>
-                            <p class="description">A decadent blend of espresso, steamed milk, and chocolate, topped with whipped cream.</p>
+                            <p class="description" id="mochaDesc">A decadent blend of espresso, steamed milk, and chocolate, topped with whipped cream.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Sweet, chocolatey, creamy, rich.</p>
                                 <p><strong>Served:</strong> In a cup, often with chocolate drizzle.</p>
@@ -153,11 +153,11 @@
                     </div>
 
                     <div class="coffee-card" data-name="Iced Coffee" data-notes="refreshing cold sweet">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-_VuQ_rpsO3x7JflagFlHzviDC-dunmyuua2zK3X8eb3wRKycRX7l76opc7W1WZIdjE&usqp=CAU" alt="Iced Coffee">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-_VuQ_rpsO3x7JflagFlHzviDC-dunmyuua2zK3X8eb3wRKycRX7l76opc7W1WZIdjE&usqp=CAU" alt="Iced Coffee" aria-describedby="icedCoffeeDesc">
                         <div class="card-content">
                             <h3>Iced Coffee</h3>
                             <p class="origin">Chilled Coffee Drink</p>
-                            <p class="description">Freshly brewed coffee served over ice, perfect for a cool pick-me-up.</p>
+                            <p class="description" id="icedCoffeeDesc">Freshly brewed coffee served over ice, perfect for a cool pick-me-up.</p>
                             <div class="details">
                                 <p><strong>Profile:</strong> Refreshing, cold, customizable sweetness.</p>
                                 <p><strong>Served:</strong> In a tall glass, with or without milk.</p>
@@ -182,7 +182,7 @@
         <p>Watch our journey of sourcing the finest beans from around the world.</p>
         <p>Learn about our roasting process and how we bring out the unique flavors of each coffee.</p>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>

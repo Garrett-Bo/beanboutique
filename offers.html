@@ -13,11 +13,11 @@
 <body>
 
 
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -31,35 +31,35 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html" class="active">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero hero-small" data-bg="image/offers-hero.png">
+    <main role="main">
+        <section class="hero hero-small" data-bg="image/offers-hero.png" role="region" aria-label="Offers Hero">
             <div class="hero-content">
                 <h1>Special Offers</h1>
                 <p>Discover our latest deals and exclusive bundles for coffee lovers.</p>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" role="region" aria-label="Current Promotions">
             <div class="container">
                 <h2 class="section-title">Current Promotions</h2>
-                <div class="offers-grid">
-                    <div class="offer-card">
+                <div class="offers-grid" role="list" aria-label="Offers List">
+                    <div class="offer-card" role="listitem" aria-label="Espresso Starter Bundle">
                         <div class="offer-badge">20% OFF</div>
-                        <img src="https://assets.wsimgs.com/wsimgs/rk/images/dp/wcm/202510/0004/breville-starter-bundle-o.jpg" alt="Espresso Bundle">
+                        <img src="https://assets.wsimgs.com/wsimgs/rk/images/dp/wcm/202510/0004/breville-starter-bundle-o.jpg" alt="Espresso Bundle" aria-describedby="espresso-bundle-desc">
                         <div class="offer-content">
                             <h3>Espresso Starter Bundle</h3>
-                            <p class="offer-desc">Get an espresso machine, two mugs, and a bag of our signature beans at a special price.</p>
+                            <p class="offer-desc" id="espresso-bundle-desc">Get an espresso machine, two mugs, and a bag of our signature beans at a special price.</p>
                             <button class="btn-add-to-cart" onclick="window.location.href='equipment.html'">Shop Bundle</button>
                         </div>
                     </div>
-                    <div class="offer-card">
+                    <div class="offer-card" role="listitem" aria-label="Pour Over Set">
                         <div class="offer-badge">Buy 1 Get 1</div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-U3fiq8fISxvQJ3A8aUMmLw1cXELY7nBEqA&s" alt="Pour Over Set">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:
                         <div class="offer-content">
                             <h3>Pour Over Set</h3>
                             <p class="offer-desc">Buy a pour over kit and get a second bag of coffee free. Perfect for sharing the love!</p>
@@ -114,7 +114,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>

@@ -11,11 +11,11 @@
 <body>
 
 
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -29,12 +29,12 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main role="main">
         <section class="hero hero-small" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');">
             <div class="hero-content">
                 <h1>Brewing Equipment</h1>
@@ -108,9 +108,9 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
-            <div class="footer-bottom" style="text-align:center; padding: 2rem 0 1rem 0;">
+            <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
                 <p>Designed with &hearts; in-house. No templates were used.</p>
             </div>

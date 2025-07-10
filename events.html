@@ -12,11 +12,11 @@
 <body>
 
 
-    <header class="main-header">
+    <header class="main-header" role="banner">
         <div class="container">
-            <nav class="main-nav">
-                <button class="mobile-menu-button" aria-label="Open navigation menu">
-                    <span class="hamburger-icon">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-button" aria-label="Open navigation menu" tabindex="0">
+                    <span class="hamburger-icon" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -30,24 +30,24 @@
                     <li><a href="events.html" class="active">Events</a></li>
                     <li><a href="offers.html">Offers</a></li>
                 </ul>
-                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count">0</span>)</a>
+                <a href="cart.html" class="btn-cart">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero hero-small" data-bg="image/event-hero.png">
+    <main role="main">
+        <section class="hero hero-small" data-bg="image/event-hero.png" role="region" aria-label="Events Hero">
             <div class="hero-content">
                 <h1>Upcoming Events</h1>
                 <p>Join us for tastings, workshops, and community gatherings at Bean Boutique.</p>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" role="region" aria-label="Events Calendar">
             <div class="container">
                 <h2 class="section-title">Events Calendar</h2>
-                <div class="event-grid">
-                    <div class="event-card">
+                <div class="event-grid" role="list" aria-label="Event List">
+                    <div class="event-card" role="listitem" aria-label="Coffee Tasting Night">
                         <div class="event-date">
                             <span class="event-day">21</span>
                             <span class="event-month">Jun</span>
@@ -60,7 +60,7 @@
                             <button class="btn-register" onclick="openRegisterModal()">Register</button>
                         </div>
                     </div>
-                    <div class="event-card">
+                    <div class="event-card" role="listitem" aria-label="Latte Art Workshop">
                         <div class="event-date">
                             <span class="event-day">05</span>
                             <span class="event-month">Jul</span>
@@ -73,7 +73,7 @@
                             <button class="btn-register" onclick="openRegisterModal()">Register</button>
                         </div>
                     </div>
-                    <div class="event-card">
+                    <div class="event-card" role="listitem" aria-label="Meet the Farmer">
                         <div class="event-date">
                             <span class="event-day">19</span>
                             <span class="event-month">Jul</span>
@@ -109,11 +109,11 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2024 Bean Boutique. All Rights Reserved.</p>
-                <p>Designed with <span aria-label="love">&hearts;</span> in-house. No templates were used.</p>
+                <p>Designed with &hearts; in-house. No templates were used.</p>
             </div>
         </div>
     </footer>
